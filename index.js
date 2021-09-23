@@ -40,15 +40,10 @@ const url2 =
     });
     let allPages = [...stormersPages, ...springbokPages];
     allPages = allPages.sort((a, b) => {
-      console.log(
-        `${a.title} length > ${b.title} length : ${
-          a.title.length > b.title.length
-        }`
-      );
       return a.title.length > b.title.length ? 1 : -1;
     });
     allPages.forEach((p, i) => {
-      console.log(`Page ${p.index + 1} of ${p.source}: ${p.title}`);
+      console.log(`Page ${p.index + 1} of asdf ${p.source}: ${p.title}`);
     });
   } catch (e) {
     console.error(e.message);
