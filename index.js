@@ -28,14 +28,14 @@ const url2 =
       return {
         title,
         index,
-        type: 'stormersPages',
+        source: 'Stormers Magazine',
       };
     });
     springbokPages = springbokPages.map(({ title }, index) => {
       return {
         title,
         index,
-        type: 'springbokPages',
+        source: 'Springboks Magazine',
       };
     });
     let allPages = [...stormersPages, ...springbokPages];
@@ -48,7 +48,7 @@ const url2 =
       return a.title.length > b.title.length ? 1 : -1;
     });
     allPages.forEach((p, i) => {
-      console.log(`Page ${p.index + 1} of ${p.type}: ${p.title}`);
+      console.log(`Page ${p.index + 1} of ${p.source}: ${p.title}`);
     });
   } catch (e) {
     console.error(e.message);
